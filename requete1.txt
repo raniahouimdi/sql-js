@@ -1,0 +1,13 @@
+SELECT 
+Master.nameLast as nom, Master.nameFirst as prenom, Salaries.teamID, Salaries.salary 
+FROM Salaries 
+JOIN Master 
+ON Salaries.playerID=Master.playerID 
+WHERE yearID="+yearID+" 
+HAVING salary = (SELECT MAX(salary) 
+                FROM Salaries 
+                WHERE yearID="+yearID+"
+
+
+
+
